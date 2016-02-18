@@ -1,0 +1,24 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+
+development:
+  <<: *default
+  database: AIFWAAA_development
+  username: amar
+  password: amar
+
+ 
+test:
+  <<: *default
+  database: AIFWAAA_test
+
+production:
+  <<: *default
+  database: AIFWAAA_production
+  username: amar
+  password: amar
